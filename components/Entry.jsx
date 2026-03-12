@@ -8,9 +8,11 @@ export default function Entry(props) {
                 />
             
             <div className="attraction-details-container flex flex-col">
-                <div className="attraction-location-container flex">
-                    <img src="/marker.png" className="maps-marker" alt="google maps marker icon" />
-                    <p className="location-country">{props.country}</p>
+                <div className="attraction-location-container flex flex-col">
+                    <div className="location flex">
+                        <img src="/marker.png" className="maps-marker" alt="google maps marker icon" />
+                        <p className="location-country">{props.country}</p>
+                    </div>
                     <a 
                         href={props.googleMapsLink} 
                         className="maps-link"
