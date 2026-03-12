@@ -39,7 +39,7 @@ h1, h2, p {
 }
 
 .attraction-name {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .attraction-dates {
@@ -122,13 +122,21 @@ a {
 
 .attraction-img {
   width: 125px;
-  height: 180px;
+  height: 200px;
   flex-shrink: 0;
   border-radius: 5px;
 }
 
 .attraction-details-container {
   gap: 0.4em;
+}
+
+.attraction-location-container {
+  gap: 0.3em;
+}
+
+.location {
+  align-items: center;
 }
 
 .maps-marker {
@@ -158,10 +166,17 @@ a {
   margin-bottom: 0.35em;
 }
 
+@media (min-width: 510px) {
+  .attraction-location-container {
+    flex-direction: row;
+  }
+}
+
 @media(min-width: 850px) {
+  .location-country,
   .maps-link,
   .attraction-dates {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .attraction-img {
@@ -171,10 +186,6 @@ a {
 
   .maps-marker {
     width: 16px;
-  }
-
-  .location-country {
-    font-size: 1.2rem;
   }
 
   .maps-link {
