@@ -1,10 +1,10 @@
-import React from "react";
-
 export default function Header() {
-    return (
-        <header>
-            <i className="fa-solid fa-earth-americas header--icon"></i>
-            <p className="header--title">My Travel Journal</p>
+    return(
+        <header className="site-header flex">
+            <div className="logo-container flex">
+                <img src="./globe.png" className="logo-img" alt="site logo representing a globe" />
+                <p className="logo-text">my travel journal</p> 
+            </div>
         </header>
     )
 }

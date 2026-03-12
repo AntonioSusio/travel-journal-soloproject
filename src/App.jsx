@@ -1,23 +1,26 @@
-import React from "react";
 import Header from "../components/Header";
-import Location from "../components/Location";
-import data from "./data";
+import Entry from "../components/Entry";
+import Footer from "../components/Footer";
+import data from "../data";
 
-export default function App() {
-    const locations = data.map(item => {
+export default function App () {
+
+    const entryElements = data.map(entry => {
         return (
-            <Location
-                key={item.id}
-                {...item}
+            <Entry 
+                img={entry.img}
+                {...entry}
             />
         )
     })
-    return (
-        <div>
+
+    return(
+        <div className="app-body flex flex-col">
             <Header />
-            <main className="locations--container">
-                {locations}
+            <main className="main-content-container flex flex-col">
+                {entryElements}
             </main>
+            <Footer />
         </div>
     )
 }
