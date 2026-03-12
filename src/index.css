@@ -1,209 +1,192 @@
-INDEX CSS
-
-*, 
-*::before, 
-*::after {
-    box-sizing: border-box;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     margin: 0;
-    padding: 0;
+}
+
+body {
+    color: #000000;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
 }
 
 /* Typography */
-.header--title,
-.location,
-.location--maps,
-.maps-dot,
-.date,
-.location--title,
-.description {
+.location-country,
+.maps-link,
+.attraction-description,
+.attraction-dates {
+  font-size: 0.85rem;
+}
+
+h1, h2, p {
     margin: 0;
 }
 
-.header--icon {
-    font-size: 24px;
+.logo-text {
+    font-weight: 500;
 }
 
-.header--title {
-    font-weight: 400;
+.location-country {
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.maps--dot {
-    font-size: 0.8rem;
-    color: #F55A5A;
+.attraction-description {
+  line-height: 1.4;
 }
 
-.location {
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: 600;
+.attraction-name {
+  font-size: 1.4rem;
 }
 
-.location--maps {
-    margin: 0 auto 0 0;
-    font-size: 0.7rem;
-    color: #918E9B;
-    font-weight: 600;
+.attraction-dates {
+  font-weight: 700;
 }
 
-.location--title {
-    font-size: 1.5625rem;
-    line-height: 1;
+/* General rules */
+img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
 }
 
-.date {
-    font-size: 0.7rem;
-    font-weight: 700;
+a {
+  display: inline-block;
 }
 
-.description {
-    font-size: 0.625rem;
-}
-
-/* Layout */
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-header,
-.locations--container,
-.location--card,
-.location--info,
-.left--container,
-.position--container {
+/* Flexbox */
+.flex {
     display: flex;
 }
 
-header,
-.left--container {
-    align-items: center;
-}
-
-.locations--container,
-.location--info,
-.position--container {
+.flex-col {
     flex-direction: column;
 }
 
-header {
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    padding: 1em;
+/* Layout */
+.attraction-card,
+.attraction-location-container,
+.logo-container,
+.main-content-container {
+  align-items: center;
+}
+
+.site-header,
+.site-footer,
+.main-content-container {
+  justify-content: center;
+}
+
+.site-header,
+.site-footer {
     background-color: #F55A5A;
-    color: #ffffff;
+    padding: 1.2em;
 }
 
-.locations--container {
-    width: 95%;
-    margin: 3em auto 0;
-    gap: 30px;
+.logo-text,
+.footer-text {
+  color: #ffffff;
 }
 
-.location--card {
-    flex-direction: row;
-    gap: 20px;
-    border-bottom: 1px solid #dddddd;
-    padding-bottom: 1.6em;
+.app-body {
+  min-height: 100vh;
 }
 
-.location--image {
-    width: 150px;
-    border-radius: 5px;
+/* Header */
+.logo-img {
+    width: 24px;
 }
 
-.location {
-    margin-left: 0.3em;
+.logo-text {
+    margin-left: 0.5em;
 }
 
-.location--info {
-    justify-content: center;
+.main-content-container {
+  flex: 1;
+  padding: 0.5em 1.5em;
 }
 
-.location--maps {
-    border: 1px solid greenS;
-    margin-left: 0.2em;
+/* Card */
+.attraction-card {
+  max-width: 900px;
+  padding: 2.5em 0;
+  gap: 1em;
 }
 
-.location--maps:hover {
-    color: #F55A5A;
-    cursor: pointer;
-    transition: .3s ease;
+.attraction-card:not(:last-child) {
+  border-bottom: 1px solid #bbb;
 }
 
-.date {
-    margin-top: 1em;
+.attraction-img {
+  width: 125px;
+  height: 180px;
+  flex-shrink: 0;
+  border-radius: 5px;
 }
 
-/* Media Query */
-@media(min-width: 480px) {
-    .locations--container {
-        width: 90%;
-    }
-
-    .maps--dot {
-        font-size: 1rem;
-        color: #F55A5A;
-    }
-    
-    .location {
-        text-transform: uppercase;
-        font-size: 1.2rem;
-        font-weight: 600;
-    }
-
-    .location--image {
-        width: 180px;
-    }
-    
-    .location--maps {
-        font-size: 0.8rem;
-        color: #918E9B;
-        font-weight: 600;
-    }
-
-    .date {
-        font-size: 0.8rem;
-    }
-
-    .description {
-        font-size: 0.75rem;
-    }
-
-    .location--maps {
-        margin-left: 1em;
-    }
+.attraction-details-container {
+  gap: 0.4em;
 }
 
-@media(min-width: 768px) {
-    .locations--container {
-        width: 70%;
-    }
-
-    .position--container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .date {
-        font-size: 1rem;
-    }
-
-    .description {
-        font-size: 0.85rem;
-    }
+.maps-marker {
+  width: 10px;
 }
 
-@media(min-width: 1024px) {
-    .locations--container {
-        width: 65%;
-    }
+.location-country {
+  margin: 0 1.2em 0 0.4em;
+}
 
-    .description {
-        font-size: 1rem;
-    }
+.maps-link {
+  color: #918E9B;
+  transition: all 300ms;
+}
+
+.maps-link:focus,
+.maps-link:hover {
+  color: #F55A5A;
+  font-weight: 700;
+}
+
+.attraction-name {
+  margin-bottom: 0.6em;
+}
+
+.attraction-dates {
+  margin-bottom: 0.35em;
+}
+
+@media(min-width: 850px) {
+  .maps-link,
+  .attraction-dates {
+    font-size: 1rem;
+  }
+
+  .attraction-img {
+    width: 200px;
+    height: 280px;
+  }
+
+  .maps-marker {
+    width: 16px;
+  }
+
+  .location-country {
+    font-size: 1.2rem;
+  }
+
+  .maps-link {
+    margin-left: 4em;
+  }
+
+  .attraction-name {
+    font-size: 1.7rem;
+  }
+
+  .attraction-description {
+    font-size: 1.15rem;
+  }
+  
 }
